@@ -1,0 +1,8 @@
+ingress:
+  enabled: true
+  
+replicas: 3
+
+configmap:
+  data:
+    CUSTOM_VAR: 'Get Started with Helm, ArgoCD, Kubernetes'

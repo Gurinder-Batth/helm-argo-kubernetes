@@ -1,0 +1,37 @@
+# File: myhelmapp/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myhelmapp-ingress
+spec:
+  rules:
+  - host: myhelmapp.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Values.appName }}
+            port:
+              number: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: myhelmappwordpress-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /video_feed
+
+spec:
+  rules:
+  - host: myhelmapp.example.com
+    http:
+      paths:
+      - path: /video2
+        pathType: Prefix
+        backend:
+          service:
+            name: {{ .Values.appName }}
+            port:
+              number: 80

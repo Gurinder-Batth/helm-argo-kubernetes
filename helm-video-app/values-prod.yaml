@@ -1,0 +1,6 @@
+
+replicas: 4
+
+configmap:
+  data:
+    CUSTOM_VAR: 'Get Started with Helm, ArgoCD, Kubernetes'

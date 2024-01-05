@@ -1,0 +1,20 @@
+appName: video
+
+ingress:
+  enabled: true
+
+
+port: 80
+
+configmap:
+  name: video-configmap-v1
+  data:
+    CUSTOM_VAR: 'Get Started with Helm, ArgoCD, Kubernetes'
+
+image:
+  name: gurinderpal/video-streaming
+  tag: latest
+
+image_database:
+  name: mariadb
+  tag: latest
