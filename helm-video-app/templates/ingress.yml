@@ -21,17 +21,17 @@ kind: Ingress
 metadata:
   name: myhelmappwordpress-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /video_feed
+    nginx.ingress.kubernetes.io/rewrite-target: /subscription
 
 spec:
   rules:
   - host: myhelmapp.example.com
     http:
       paths:
-      - path: /video2
+      - path: /subscription
         pathType: Prefix
         backend:
           service:
-            name: {{ .Values.appName }}
+            name: {{ .Values.appName }}subscription
             port:
               number: 80

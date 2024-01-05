@@ -15,6 +15,12 @@ image:
   name: gurinderpal/video-streaming
   tag: latest
 
+
+image_subscription:
+  name: gurinderpal/subscription-video-streaming
+  tag: latest
+
+
 image_database:
   name: mariadb
   tag: latest

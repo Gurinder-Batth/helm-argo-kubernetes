@@ -17,6 +17,22 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
+  name: {{ .Values.appName }}subscription
+  labels:
+    app: {{ .Values.appName }}subscription
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    name: flask
+  selector:
+    app: {{ .Values.appName }}subscription
+    tier: frontend
+  type: NodePort
+---
+apiVersion: v1
+kind: Service
+metadata:
   name: {{ .Values.appName }}database
   labels:
     app: {{ .Values.appName }}database
