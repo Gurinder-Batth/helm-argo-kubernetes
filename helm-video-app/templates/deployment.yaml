@@ -39,7 +39,7 @@ metadata:
   labels:
     app: {{ .Values.appName }}database
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicas_db }}
   selector:
     matchLabels:
       app: {{ .Values.appName }}database

@@ -2,6 +2,7 @@ ingress:
   enabled: true
   
 replicas: 3
+replicas_db: 1
 
 configmap:
   data:
