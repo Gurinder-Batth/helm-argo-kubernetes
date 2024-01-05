@@ -21,7 +21,7 @@ kind: Ingress
 metadata:
   name: myhelmappwordpress-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /subscription
+    nginx.ingress.kubernetes.io/rewrite-target: /payment_page
 
 spec:
   rules:
