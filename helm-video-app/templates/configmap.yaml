@@ -3,4 +3,4 @@ apiVersion: v1
 metadata:
   name: {{ .Values.configmap.name }}
 data:
-  CUSTOM_VAR: {{ .Values.configmap.data.CUSTOM_HEADER }}
+  CUSTOM_VAR: {{ .Values.configmap.data.CUSTOM_VAR }}
