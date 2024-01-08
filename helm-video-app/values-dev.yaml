@@ -1,7 +1,8 @@
 ingress:
   enabled: true
   
-replicas: 1
+replicas: 3
+replicas_subscription: 1
 replicas_db: 1
 
 configmap:

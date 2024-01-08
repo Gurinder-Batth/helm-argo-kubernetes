@@ -39,7 +39,7 @@ metadata:
   labels:
     app: {{ .Values.appName }}subscription
 spec:
-  replicas: {{ .Values.replicas }}
+  replicas: {{ .Values.replicas_subscription }}
   selector:
     matchLabels:
       app: {{ .Values.appName }}subscription
